@@ -1,0 +1,189 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.carouselContainer {
+	height: calc(100vh - 16px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.carouselContainer ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between
+}
+
+.carouselContainer ul li {
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #1A65E9;
+	border-right: 0;
+	text-align: center;
+	cursor: pointer;
+	color: #1A65E9;
+}
+
+.carouselContainer ul li:last-child {
+	border-right: 1px solid #1A65E9;
+}
+
+.carouselContainer ul li.active {
+	background: #1A65E9;
+	color: #fff;
+}
+
+.carousel {
+	margin: 100px 0 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel .sliderContainer {
+	display: flex;
+}
+
+.carousel .sliderContent {
+  max-width: 33%;
+	min-width: 33%;
+	width: 100%;
+	height: 300px;
+	display: inline-block;
+	text-align: center;
+}
+
+.carousel .sliderContent p {
+	width: 100%;
+	margin: 0;
+	display: inline-block;
+	text-transform: capitalize;
+}
+
+.carousel .sliderContent img {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+.carousel .sliderContent.active {
+	box-shadow: 5px 10px 18px #888888;
+	transform: scale(1.25);
+}
+
+.carousel button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.carousel button svg {
+	font-size: 40px;
+}
+
+.animatedContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@keyframes animateSlideOut {
+  0% {
+    width: 0;
+	}
+	25% {
+		width: 25%;
+	}
+	50% {
+		width: 50%;
+	}
+	75% {
+		width: 75%;
+	}
+  100% {
+    width: 100%;
+  }
+}
+
+.slideOut {
+  animation: animateSlideOut 0.8s;
+  width: 100%;
+}
+
+.slideOut img,
+.slideIn img {
+	max-width: 100%;
+	min-width: 100%;
+}
+
+@keyframes animateFadeIn {
+  0%   {
+    opacity: 1;
+	}
+	25% {
+		opacity: .75;
+	}
+	50% {
+		opacity: .5;
+	}
+	75% {
+		opacity: .25;
+	}
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: animateFadeIn 0.8s;
+}
+
+@keyframes animateSlideIn {
+  0%   {
+    width: 100%;
+	}
+	25% {
+		width: 75%;
+	}
+	50% {
+		width: 50%;
+	}
+	75% {
+		width: 25%;
+	}
+  100% {
+    width: 0%;
+  }
+}
+
+.slideIn {
+  animation: animateSlideIn 0.8s;
+  width: 0%;
+}
+
+@keyframes animateFadeOut {
+  0%   {
+    opacity: 0;
+	}
+	25% {
+		opacity: .25;
+	}
+	50% {
+		opacity: .5;
+	}
+	75% {
+		opacity: .75;
+	}
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: animateFadeOut 0.8s;
+}
